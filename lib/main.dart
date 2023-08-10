@@ -16,19 +16,21 @@ class MyApp extends StatelessWidget {
       title: 'My Digi Mall',
       theme: ThemeData(
           appBarTheme: AppBarTheme(
-              titleTextStyle: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              iconTheme: IconThemeData(color: Colors.black, size: 35)),
+            iconTheme: IconThemeData(color: Colors.white, size: 30),
+            titleTextStyle: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 20,
+                fontWeight: FontWeight.bold),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+          ),
           primarySwatch: Colors.blue,
           brightness: Brightness.light,
+          fontFamily: 'OpenSans',
           // useMaterial3: true,
           textTheme: const TextTheme(
               titleLarge: TextStyle(fontSize: 28),
-              titleMedium: TextStyle(fontSize: 24),
+              titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               titleSmall: TextStyle(fontSize: 18))),
       home: const LogIn(),
       initialBinding: BindingsBuilder(() {}),
