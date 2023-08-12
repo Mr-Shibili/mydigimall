@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:my_digi_mall/constants/constants.dart';
 import 'package:my_digi_mall/views/common/widgets/otp_box.dart';
 import 'package:my_digi_mall/views/common/widgets/round_button.dart';
@@ -73,7 +72,7 @@ class VerifyOtp extends StatelessWidget {
                     const Spacer(),
                     RoundButton(
                       onPress: () {
-                        Get.to(ProfilePage());
+                        Get.to(const ProfilePage());
                       },
                     ),
                   ],

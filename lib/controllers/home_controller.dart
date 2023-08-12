@@ -3,28 +3,29 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   late ScrollController scrollController;
-  late bool isScrolled = false;
-
-  void initState() {
+  final isScrolled = false.obs;
+  @override
+  void onInit() {
     scrollController = ScrollController();
     scrollController.addListener(handleScroll);
+    super.onInit();
   }
 
   void handleScroll() {
     if (scrollController.offset > 50) {
-      if (!isScrolled) {
-        isScrolled = true;
+      if (!isScrolled.value) {
+        isScrolled.value = true;
       }
     } else {
-      if (isScrolled) {
-        isScrolled = false;
+      if (isScrolled.value) {
+        isScrolled.value = false;
       }
     }
   }
 
   @override
-  void dispose() {
+  void onClose() {
     scrollController.dispose();
-    super.dispose();
+    super.onClose();
   }
 }

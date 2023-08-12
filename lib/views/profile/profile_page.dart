@@ -16,9 +16,9 @@ class ProfilePage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           leading: IconButton(
             onPressed: () {
-              Get.off(LogIn());
+              Get.off(const LogIn());
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: Colors.black,
               size: 30,
@@ -33,7 +33,7 @@ class ProfilePage extends StatelessWidget {
             CircleAvatar(
               backgroundColor: Colors.blue[200],
               radius: 65,
-              child: CircleAvatar(
+              child: const CircleAvatar(
                 backgroundColor: Colors.yellow,
                 radius: 62,
               ),
@@ -52,7 +52,7 @@ class ProfilePage extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 hintText: 'Enter name',
-                hintStyle: Theme.of(context).textTheme.bodyMedium,
+                hintStyle: Theme.of(context).textTheme.bodyLarge,
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
@@ -61,7 +61,7 @@ class ProfilePage extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                   hintText: 'Mobile number',
-                  hintStyle: Theme.of(context).textTheme.bodyMedium,
+                  hintStyle: Theme.of(context).textTheme.bodyLarge,
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12))),
             ),
@@ -70,13 +70,13 @@ class ProfilePage extends StatelessWidget {
       ))),
       bottomNavigationBar: InkWell(
         onTap: () {
-          Get.to(HomePage());
+          Get.to(const HomePage());
         },
         child: Container(
           color: Colors.lightBlue,
           height: size.height * 0.08,
           width: double.infinity,
-          child: Center(
+          child: const Center(
               child: Text(
             'UPDATE',
             style: TextStyle(fontSize: 20, color: Colors.white),

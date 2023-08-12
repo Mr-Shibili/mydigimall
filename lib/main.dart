@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Digi Mall',
       theme: ThemeData(
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             iconTheme: IconThemeData(color: Colors.white, size: 30),
             titleTextStyle: TextStyle(
                 fontFamily: 'OpenSans',
