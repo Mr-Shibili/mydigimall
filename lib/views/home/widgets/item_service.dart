@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../constants/constants.dart';
-import '../../detail_view/dertail_services_page.dart';
+import '../../category/category_page.dart';
 
 class ItemService extends StatelessWidget {
   const ItemService({
@@ -16,17 +16,17 @@ class ItemService extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(ServiceDetailPage());
+        Get.to(const CategoryPage());
       },
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CircleAvatar(
             backgroundColor: Colors.grey,
-            radius: 40,
+            radius: 35,
             child: CircleAvatar(
-              radius: 38,
+              radius: 33,
               backgroundColor: Colors.white,
               backgroundImage: AssetImage('assets/imagebg.jpg'),
             ),

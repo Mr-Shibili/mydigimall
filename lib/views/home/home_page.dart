@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_digi_mall/views/detail_view/dertail_services_page.dart';
 import 'package:my_digi_mall/views/home/widgets/drawer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:my_digi_mall/views/home/widgets/item_service.dart';
 import '../../constants/constants.dart';
 import '../../controllers/home_controller.dart';
+import '../common/widgets/drop_down.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -54,33 +54,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 5),
-                          child: DecoratedBox(
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8.0),
-                                child: DropdownButton(
-                                  hint: const Text('Kozhikode'),
-
-                                  items: const [
-                                    DropdownMenuItem(
-                                      value: "menuone",
-                                      child: Text(
-                                        "Kozhikode",
-                                        style: TextStyle(color: Colors.black),
-                                      ),
-                                    )
-                                  ],
-                                  onChanged: (value) {},
-                                  isExpanded:
-                                      true, //make true to take width of parent widget
-                                  underline: Container(), //empty line
-                                  style: const TextStyle(
-                                      fontSize: 18, color: Colors.white),
-                                ),
-                              )),
+                          child: CustomDropDown(),
                         ),
                         khight20,
                         CarouselSlider(

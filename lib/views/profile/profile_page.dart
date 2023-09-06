@@ -52,7 +52,7 @@ class ProfilePage extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 hintText: 'Enter name',
-                hintStyle: Theme.of(context).textTheme.bodyLarge,
+                hintStyle: TextStyle(fontSize: 18, color: Colors.grey),
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
@@ -61,7 +61,7 @@ class ProfilePage extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                   hintText: 'Mobile number',
-                  hintStyle: Theme.of(context).textTheme.bodyLarge,
+                  hintStyle: TextStyle(fontSize: 18, color: Colors.grey),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12))),
             ),
