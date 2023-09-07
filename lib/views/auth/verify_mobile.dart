@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_digi_mall/constants/constants.dart';
+import 'package:my_digi_mall/controllers/otp_controller.dart';
 import 'package:my_digi_mall/views/common/widgets/otp_box.dart';
 import 'package:my_digi_mall/views/common/widgets/round_button.dart';
 import 'package:my_digi_mall/views/profile/profile_page.dart';
 
 class VerifyOtp extends StatelessWidget {
-  VerifyOtp({super.key});
+  String phoneNumber;
+  VerifyOtp(this.phoneNumber, {super.key});
+
   final TextEditingController _fieldOne = TextEditingController();
   final TextEditingController _fieldTwo = TextEditingController();
   final TextEditingController _fieldThree = TextEditingController();
   final TextEditingController _fieldFour = TextEditingController();
   String? otp;
+
+  final OtpController _controller = OtpController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -72,7 +78,13 @@ class VerifyOtp extends StatelessWidget {
                     const Spacer(),
                     RoundButton(
                       onPress: () {
-                        Get.to(const ProfilePage());
+                        if (_fieldOne.text.isNotEmpty &&
+                            _fieldTwo.text.isNotEmpty &&
+                            _fieldThree.text.isNotEmpty &&
+                            _fieldFour.text.isNotEmpty) {
+                          _controller.verifyOTP(phoneNumber,
+                              "${_fieldOne.text}${_fieldTwo.text}${_fieldThree.text}${_fieldFour.text}");
+                        }
                       },
                     ),
                   ],

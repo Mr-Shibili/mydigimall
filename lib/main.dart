@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               titleLarge: TextStyle(fontSize: 28),
               titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               titleSmall: TextStyle(fontSize: 18))),
-      home: const LogIn(),
+      home: LogIn(),
       initialBinding: BindingsBuilder(() {}),
     );
   }

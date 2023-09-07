@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           leading: IconButton(
             onPressed: () {
-              Get.off(const LogIn());
+              Get.off(LogIn());
             },
             icon: const Icon(
               Icons.arrow_back,
